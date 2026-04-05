@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-f&1!q=g&5ve)isptau%*i3)3+f_n0-@(b6pftlf5_e%&d^09wg
 DEBUG = True
 
 ALLOWED_HOSTS = ['https://to-do-project-1-itkx.onrender.com','to-do-project-1-itkx.onrender.com']
-CSRF_TRUSTED_ORIGINS = ['https://to-do-project-1-itkx.onrender.com','to-do-project-1-itkx.onrender.com'] # Deploy korar age ei line add korte hobe
+CSRF_TRUSTED_ORIGINS = ['https://to-do-project-1-itkx.onrender.com'] # Deploy korar age ei line add korte hobe
 
 # Application definition
 
