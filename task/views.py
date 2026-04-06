@@ -38,14 +38,14 @@ def task_list(request):
 @login_required
 def task_create(request):
     if request.method == 'POST':
-        form = TaskForm(request.POST)
+        form = TaskForm(user = request.user, data = request.POST)
         if form.is_valid():
             form = form.save(commit=False) # commit = False mane form database e save hobena but model form ta create hobe jeta database e save howar jonne ready
             form.user = request.user
             form.save() #database e save hobe
             return redirect('task_list')
     else:
-        form = TaskForm()
+        form = TaskForm(user=request.user)
     return render(request, 'task_form.html', {'form' : form , 'title': 'Create Task'})
 
 @login_required
